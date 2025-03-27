@@ -1,0 +1,5 @@
+com\myshop\service\UserService.class
+com\myshop\model\User.class
+com\myshop\repository\UserRepository.class
+com\myshop\MyShopApplication.class
+com\myshop\controller\UserController.class
