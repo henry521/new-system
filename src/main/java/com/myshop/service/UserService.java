@@ -12,13 +12,13 @@ public class UserService {
     private UserRepository userRepository;
     
     public User login(User user) {
-        return userRepository.findByUsername(user.getUsername())
+        return userRepository.findByEmail(user.getEmail())
                 .filter(u -> u.getPassword().equals(user.getPassword()))
                 .orElse(null);
     }
     
     public User register(User user) {
-        if (userRepository.findByUsername(user.getUsername()).isPresent()) {
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
             return null;
         }
         return userRepository.save(user);
